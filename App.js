@@ -1,31 +1,5 @@
-//this is for single element.......
-
-// const heading1 = React.createElement(
-//   "h1",
-//   {
-//     id: "heading",
-//     data: "heading-data",
-//   },
-//   "hello Namste React Jiii..."
-// );
-// const root1 = ReactDOM.createRoot(document.getElementById("root"));
-// root1.render(heading1);
-
-// this is for nested elements..................
-
-// const heading2 = React.createElement(
-//   "div",
-//   { id: "parent" },
-//   React.createElement(
-//     "div",
-//     { id: "child" },
-//     React.createElement("h1", { id: "heading" }, "Hello Nested React")
-//   )
-// );
-// const root2 = ReactDOM.createRoot(document.getElementById("root"));
-// root2.render(heading2);
-
-// this is for nested elements with multiple siblings..................
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 const heading2 = React.createElement(
   "div",
