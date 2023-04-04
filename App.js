@@ -1,15 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading2 = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", { id: "heading" }, "Hello Nested React1"),
-    React.createElement("h2", { id: "heading" }, "Hello Nested React2"),
-    React.createElement("h3", { id: "heading" }, "Hello Nested React3"),
-    React.createElement("h4", { id: "heading" }, "Hello Nested React3"),
-  ])
+//react element
+const jsxHeading = (
+  <h1 className="heading" id="jsxHeading">
+    HI ABHISHEK WELCOME BACK !
+  </h1>
 );
-const root2 = ReactDOM.createRoot(document.getElementById("root"));
-root2.render(heading2);
+
+//react component 1
+
+const Title = () => {
+  return <p>Hi There</p>;
+};
+//react component 2
+const Heading = () => {
+  return (
+    <div className="container">
+      <Title />
+      <h1 className="heading">Hello React ! How are you?</h1>
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Heading />);

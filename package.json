@@ -2,8 +2,10 @@
   "name": "namste_react",
   "version": "1.0.0",
   "description": "This is namste react package manager.",
-  "main": "App.js",
+
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
