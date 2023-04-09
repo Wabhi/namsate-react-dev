@@ -1,27 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./src/components/Header";
+import Footer from "./src/components/Footer";
+import Body from "./src/components/Body";
 
-//react element
-const jsxHeading = (
-  <h1 className="heading" id="jsxHeading">
-    HI ABHISHEK WELCOME BACK !
-  </h1>
-);
-
-//react component 1
-
-const Title = () => {
-  return <p>Hi There</p>;
-};
-//react component 2
-const Heading = () => {
+const AppLayout = () => {
   return (
-    <div className="container">
-      <Title />
-      <h1 className="heading">Hello React ! How are you?</h1>
+    <div className="App">
+      <Header />
+      <Body />
+      <Footer />
     </div>
   );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Heading />);
+root.render(<AppLayout />);

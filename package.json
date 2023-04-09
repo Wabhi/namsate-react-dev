@@ -2,7 +2,6 @@
   "name": "namste_react",
   "version": "1.0.0",
   "description": "This is namste react package manager.",
-
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -28,6 +27,8 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "font-awesome": "^4.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

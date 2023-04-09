@@ -18,3 +18,9 @@
 - code splitting
 - defferencial bunddling
 - consistent hashing
+
+#food App structure
+
+- Header(logo,navitems)
+- Body(search bar, button, card container component,card component)
+- Footer(links,copyright, contact, address)
