@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
 import { API_DATA } from "../../utils/mockData";
+import { Link } from "react-router-dom";
 
 const handleSearchRestro = (searchText, listOfRestro) => {
   let updateListOfRestro = listOfRestro.filter((restro) => {
@@ -83,7 +84,11 @@ const Body = () => {
       ) : (
         <div className="cards_container">
           {listOfRestro.map((data, index) => {
-            return <Card key={index} resData={data} />;
+            return (
+              <Link to={`/restaurant/${data.data.id}`} key={data.data.id}>
+                <Card resData={data} />
+              </Link>
+            );
           })}
         </div>
       )}

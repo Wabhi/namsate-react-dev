@@ -29,15 +29,16 @@ body {
   list-style: none;
 }
 
-.nav-items > ul > li {
+.nav-items > ul > a {
   margin: 20px;
   padding: 20px;
   font-size: 18px;
   font-weight: bold;
   color: white;
   cursor: pointer;
+  text-decoration: none;
 }
-.nav-items > ul > li:hover {
+.nav-items > ul > a:hover {
   color: #42f5ec;
   transition: transform 0.5s ease-in-out;
   opacity: 1;
@@ -57,7 +58,7 @@ body {
 
 .card {
   position: relative;
-  width: 300px;
+  max-width: 300px;
   height: 320px;
   padding: 10px;
   border-radius: 10px;
@@ -81,6 +82,10 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+}
+
+.cards_container > a {
+  text-decoration: none;
 }
 
 .restro_name {
