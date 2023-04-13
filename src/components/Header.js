@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LOGO_URL } from "../../utils/constant";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [userLoggedIn, setUserLoggedIn] = useState(false);
@@ -11,20 +12,30 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contact us</li>
-          <li>Cart</li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/about">
+            <li>About us</li>
+          </Link>
+          <Link to="/contact">
+            <li>Contact us</li>
+          </Link>
+          <Link to="cart">
+            <li>Cart</li>
+          </Link>
           {userLoggedIn ? (
-            <li onClick={() => setUserLoggedIn(false)}>Logout</li>
+            <Link onClick={() => setUserLoggedIn(false)}>
+              <li>Logout</li>
+            </Link>
           ) : (
-            <li
+            <Link
               onClick={() => {
                 setUserLoggedIn(true);
               }}
             >
-              Login
-            </li>
+              <li>Login</li>
+            </Link>
           )}
         </ul>
       </div>
