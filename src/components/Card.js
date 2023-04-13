@@ -12,7 +12,7 @@ const Card = (props) => {
       <h3 className="restro_name">{resData.data.name}</h3>
       <h4 className="restro_cusion">{resData.data.cuisines.join(",")}</h4>
       <div className="product_additional_details">
-        <div>&#9733; {resData.data.avgRating}</div>
+        <div className="product_rating">&#9733; {resData.data.avgRating}</div>
         <div>{resData.data.deliveryTime}min</div>
         <div>₹{resData.data.costForTwo / 100} FOR TWO</div>
       </div>
