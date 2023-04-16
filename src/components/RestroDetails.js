@@ -19,6 +19,7 @@ const RestroDetails = () => {
     setRestaurant(res.data);
   }
 
+  console.log(restaurant);
   return (
     <div style={{ marginTop: "200px", color: "white" }}>
       <h1>{id}</h1>
