@@ -338,32 +338,20 @@ body {
   align-items: center;
 }
 
-.sidenav {
+.sideMenu {
   height: 100%;
-  display: none;
   position: fixed;
   width: 350px;
-  z-index: 1;
   top: 0;
   right: 0;
-  background-color: white;
-  overflow-x: hidden;
-  transition: all 1.5s;
-  -webkit-transition: all 1.25s;
-  padding-top: 60px;
-  display: block;
+  z-index: 2000;
+  background-color: rgba(251, 239, 247, 1);
+  transition: all 1.35s ease-out;
+  /* opacity: 0.7;
+  overflow: hidden; */
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav .closebtn {
+.sideMenu .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -374,22 +362,5 @@ body {
 }
 
 .closebtn:hover {
-  color: red;
   cursor: pointer;
-}
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
-.login_form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
 }
