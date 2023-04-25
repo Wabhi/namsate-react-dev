@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "./Card";
 import { API_DATA } from "../../utils/mockData";
 import { Link } from "react-router-dom";
+import ImageCarousel from "./ImageCarousal";
 
 const handleSearchRestro = (searchText, listOfRestro) => {
   let updateListOfRestro = listOfRestro.filter((restro) => {
@@ -49,50 +50,57 @@ const Body = () => {
   //   );
   // }
   return (
-    <div className="body_main_container">
-      <div className="search_container">
-        <input
-          className="search_input"
-          type="text"
-          placeholder="Search..."
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
-        <button
-          className="search_btn"
-          onClick={() => {
-            const data = handleSearchRestro(searchText, listOfRestro);
-            console.log(data);
-            setListOfRestro(data);
-          }}
-        >
-          Search
-        </button>
-      </div>
-      <div className="rating_button_conatiner">
-        <button className="top_rated_btn" onClick={handleClickForTopRestro}>
-          TOP RATED RESTRORENTS
-        </button>
-        <button className="top_rated_btn" onClick={handleClickForClearFilter}>
-          CLEAR THE FILTER
-        </button>
-      </div>
-      {loading ? (
-        <div className="loader-container">
-          <div className="spinner"></div>
+    <>
+      <div className="body_main_container">
+        <marquee class="css1">
+          We will be happy to serve you. Eat well feel well. 😊
+        </marquee>
+        <ImageCarousel />
+
+        {/* <div className="search_container">
+          <input
+            className="search_input"
+            type="text"
+            placeholder="Search..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button
+            className="search_btn"
+            onClick={() => {
+              const data = handleSearchRestro(searchText, listOfRestro);
+              console.log(data);
+              setListOfRestro(data);
+            }}
+          >
+            Search
+          </button>
+        </div> */}
+        <div className="rating_button_conatiner">
+          <button className="top_rated_btn" onClick={handleClickForTopRestro}>
+            TOP RATED RESTRORENTS
+          </button>
+          <button className="top_rated_btn" onClick={handleClickForClearFilter}>
+            CLEAR THE FILTER
+          </button>
         </div>
-      ) : (
-        <div className="cards_container">
-          {listOfRestro.map((data, index) => {
-            return (
-              <Link to={`/restaurant/${data.data.id}`} key={data.data.id}>
-                <Card resData={data} />
-              </Link>
-            );
-          })}
-        </div>
-      )}
-    </div>
+        {loading ? (
+          <div className="loader-container">
+            <div className="spinner"></div>
+          </div>
+        ) : (
+          <div className="cards_container">
+            {listOfRestro.map((data, index) => {
+              return (
+                <Link to={`/restaurant/${data.data.id}`} key={data.data.id}>
+                  <Card resData={data} />
+                </Link>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 export default Body;

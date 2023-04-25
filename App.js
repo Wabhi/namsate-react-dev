@@ -9,6 +9,7 @@ import Cart from "./src/components/Cart";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Error from "./src/components/Error";
 import RestroDetails from "./src/components/RestroDetails";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const AppLayout = () => {
   return (
