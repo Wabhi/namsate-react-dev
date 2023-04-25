@@ -364,3 +364,35 @@ body {
 .closebtn:hover {
   cursor: pointer;
 }
+
+.carousel {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background: #42f5ec;
+}
+
+.css1 {
+  color: #008036;
+  text-shadow: 2px 2px 8px red;
+  font-size: 28px;
+  font-family: monospace;
+  font-weight: bold;
+  margin-top: -44px;
+}
+
+.carousel .slide {
+  min-width: 100%;
+  text-align: center;
+  height: 450px;
+  margin: 0px;
+  position: relative;
+}
+
